@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --background: #0B0B0D;
+    --foreground: #F7F3EC;
+    --charcoal: #171719;
+    --gold: #C6A66B;
+    --gold-light: #DFCA9A;
+    --gold-dark: #9A7B42;
+    --ivory: #F7F3EC;
+    --muted: #999999;
+  }
+}
+
+body {
+  background-color: #0B0B0D;
+  color: #F7F3EC;
+  font-family: var(--font-manrope), sans-serif;
+  overflow-x: hidden;
+  selection-background-color: #C6A66B;
+  selection-color: #0B0B0D;
+}
+
+::selection {
+  background: #C6A66B;
+  color: #0B0B0D;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0B0B0D;
+}
+::-webkit-scrollbar-thumb {
+  background: #26262B;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C6A66B;
+}
+
+/* Smooth ambient glow utility */
+.gold-glow {
+  box-shadow: 0 0 35px -5px rgba(198, 166, 107, 0.25);
+}
+
+.gold-border-glow {
+  border: 1px solid rgba(198, 166, 107, 0.25);
+  transition: all 0.4s ease;
+}
+
+.gold-border-glow:hover {
+  border-color: rgba(198, 166, 107, 0.6);
+  box-shadow: 0 0 25px rgba(198, 166, 107, 0.15);
+}
+
+.gold-text-gradient {
+  background: linear-gradient(135deg, #F7F3EC 0%, #DFCA9A 50%, #C6A66B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-sheen {
+  background: linear-gradient(90deg, transparent, rgba(198, 166, 107, 0.15), transparent);
+}
